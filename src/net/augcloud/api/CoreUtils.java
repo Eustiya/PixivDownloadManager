@@ -1,0 +1,47 @@
+/*
+ * ©2021 August-soft Corporation. All rights reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package net.augcloud.api;
+
+import net.augcloud.pixivdownloadmanager.core.InvokeDriver_google_;
+import net.augcloud.ui.Controllers;
+
+import java.util.List;
+
+/**
+ * @author ：Arisa
+ * @date ：Created in 2020/4/3 3:39
+ * @description：
+ * @version: $
+ */
+public class CoreUtils {
+    
+    public static void start(){
+        download( Controllers.authorController.getURLs());
+    }
+    
+    public static void download(List<String> list){
+        for (String s : list) {
+            try {
+                InvokeDriver_google_.invoke(s);
+                Thread.sleep(1000);
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+        }
+        
+    }
+}

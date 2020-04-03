@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="466.0" prefWidth="921.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.augcloud.ui.controller.Controller">
+   <children>
+      <MenuBar prefHeight="27.0" prefWidth="930.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ProgressBar layoutY="453.0" prefHeight="27.0" prefWidth="930.0" progress="0.0" />
+      <TextFlow fx:id="textFlow" layoutY="22.0" prefHeight="431.0" prefWidth="293.0" style="-fx-background-color: #3C3C3C;" />
+      <TableView fx:id="mainTable" layoutX="291.0" layoutY="141.0" prefHeight="312.0" prefWidth="640.0">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="44.0" text="序号" />
+            <TableColumn fx:id="authorColumn" prefWidth="108.0" text="作者" />
+          <TableColumn fx:id="fileColumn" prefWidth="105.0" text="图名" />
+          <TableColumn fx:id="sizeColumn" prefWidth="62.0" text="大小" />
+            <TableColumn fx:id="dateColumn" minWidth="0.0" prefWidth="112.0" text="下载日期" />
+            <TableColumn fx:id="uploaddateColumn1" prefWidth="105.0" text="发布日期" />
+            <TableColumn fx:id="threadNumberColumn" prefWidth="88.0" text="使用线程数量" />
+        </columns>
+      </TableView>
+      <Separator layoutX="291.0" layoutY="22.0" orientation="VERTICAL" prefHeight="431.0" prefWidth="4.0" />
+      <Separator layoutX="291.0" layoutY="139.0" prefHeight="4.0" prefWidth="516.0" />
+      <Pane layoutX="291.0" layoutY="22.0" prefHeight="119.0" prefWidth="492.0" style="-fx-background-color: #2C3E50;">
+         <children>
+            <Button mnemonicParsing="false" onAction="#author" prefHeight="119.0" prefWidth="47.0" text="作家" textAlignment="JUSTIFY" textOverrun="LEADING_ELLIPSIS" />
+            <Button layoutX="47.0" mnemonicParsing="false" onAction="#proxy" prefHeight="119.0" prefWidth="47.0" text="代理" textAlignment="JUSTIFY" textOverrun="LEADING_ELLIPSIS" />
+            <Button layoutX="94.0" mnemonicParsing="false" onAction="#options" prefHeight="119.0" prefWidth="47.0" text="参数" textAlignment="JUSTIFY" textOverrun="LEADING_ELLIPSIS" />
+            <CheckBox layoutX="157.0" layoutY="21.0" mnemonicParsing="false" selected="true" text="无节制爬取" textFill="#e8e8e8" />
+            <CheckBox layoutX="157.0" layoutY="52.0" mnemonicParsing="false" text="多线程(内存要求高)" textFill="#e8e8e8" />
+            <CheckBox disable="true" layoutX="157.0" layoutY="79.0" mnemonicParsing="false" selected="true" text="去R18" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Pane layoutX="781.0" layoutY="22.0" prefHeight="119.0" prefWidth="149.0" style="-fx-background-color: #D0D0D0;">
+         <children>
+            <Button layoutX="24.0" layoutY="19.0" mnemonicParsing="false" onAction="#start" prefHeight="81.0" prefWidth="102.0" text="启动" />
+         </children>
+      </Pane>
+   </children>
+
+    
+</Pane>

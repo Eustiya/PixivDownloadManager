@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="674.0" prefWidth="606.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.augcloud.ui.OptionsInterface">
+   <children>
+      <Pane prefHeight="674.0" prefWidth="606.0">
+         <children>
+            <TabPane prefHeight="674.0" prefWidth="606.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="               账户设置               ">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="128.0" fitWidth="128.0" layoutX="73.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true" />
+                              <Separator layoutX="58.0" layoutY="226.0" prefHeight="0.0" prefWidth="494.0" />
+                              <Label layoutX="246.0" layoutY="91.0" text="账号" />
+                              <TextField layoutX="291.0" layoutY="87.0" />
+                              <Label layoutX="246.0" layoutY="142.0" text="密码" />
+                              <PasswordField layoutX="291.0" layoutY="138.0" />
+                              <Button layoutX="475.0" layoutY="79.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="84.0" text="登录" />
+                              <Label layoutX="58.0" layoutY="36.0" prefHeight="15.0" prefWidth="124.0" text="Pivix账户登录">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="58.0" layoutY="267.0" text="无账户？">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox layoutX="134.0" layoutY="323.0" prefWidth="150.0" />
+                              <Label layoutX="73.0" layoutY="327.0" text="自动登录" />
+                              <Label layoutX="209.0" layoutY="195.0" text="OR" />
+                              <Separator layoutX="228.0" layoutY="173.0" prefHeight="4.0" prefWidth="341.0" />
+                              <Button layoutX="319.0" layoutY="191.0" mnemonicParsing="false" text="传入Cookie并尝试登录" />
+                              <Button layoutX="362.0" layoutY="289.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="97.0" text="登录" />
+                              <Separator layoutX="58.0" layoutY="421.0" prefHeight="5.0" prefWidth="494.0" />
+                              <TextArea layoutX="58.0" layoutY="445.0" prefHeight="148.0" prefWidth="486.0" text="登录前，请保证已经连接代理，并且代理主机位于非中国大陆(不包括香港、澳门等)&#10;如果您不放心，可以传入Cookie登陆，或实验性地浏览器中登陆&#10;&#10;自动登录的账号密码由本人提供，存在多人使用顶号的情况&#10;如果你希望使用独立账号，也许充电就能解决了呢&#10;通过账号密码登录后，默认会记住密码，持久化登录&#10;&#10;&#10;&#10;" />
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="               下载设置               ">
+                  <content>
+                    <AnchorPane layoutX="606.0" layoutY="674.0" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Separator layoutX="77.0" layoutY="347.0" prefHeight="0.0" prefWidth="458.0" />
+                              <TextArea layoutX="55.0" layoutY="380.0" prefHeight="235.0" prefWidth="514.0" />
+                              <CheckBox layoutX="55.0" layoutY="46.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="433.0" text="使用多线程获取下载链接 （或使用更多内存）" />
+                              <CheckBox layoutX="55.0" layoutY="80.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="260.0" text="贪婪的下载" />
+                              <MenuButton layoutX="185.0" layoutY="119.0" mnemonicParsing="false" text="MenuButton">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                                  <MenuItem mnemonicParsing="false" text="Action 2" />
+                                </items>
+                              </MenuButton>
+                              <Label layoutX="55.0" layoutY="123.0" text="下载使用的线程数量" />
+                              <CheckBox disable="true" layoutX="55.0" layoutY="166.0" mnemonicParsing="false" text="竭尽可能的加速下载" />
+                              <TextField layoutX="147.0" layoutY="218.0" prefHeight="23.0" prefWidth="91.0" text="512x512" />
+                              <Label layoutX="62.0" layoutY="222.0" text="图片最小尺寸" />
+                              <TextField layoutX="120.0" layoutY="268.0" prefHeight="23.0" prefWidth="54.0" text="512" />
+                              <Label layoutX="62.0" layoutY="272.0" text="图片大小" />
+                              <Label layoutX="177.0" layoutY="272.0" text="KB" />
+                              <TextField layoutX="134.0" layoutY="311.0" prefHeight="23.0" prefWidth="345.0" />
+                              <Label layoutX="74.0" layoutY="315.0" text="下载路径" />
+                              <Button layoutX="496.0" layoutY="311.0" mnemonicParsing="false" text="选择" />
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="               其他               ">
+                     <content>
+                        <AnchorPane layoutX="606.0" layoutY="674.0" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
